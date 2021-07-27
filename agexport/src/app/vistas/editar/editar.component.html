@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="container">
+    <form [formGroup]="editarForm" (ngSubmit)="postForm(editarForm.value)">
+        <div class="form-group row">
+            <div>
+                <label for="exampleFormControlInput1"></label>
+                <input type="text" class="form-control" placeholder="Id de La Factura" formControlName="id" hidden>
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1">Cliente</label>
+                <input type="text" class="form-control" placeholder="Cliente" formControlName="nombre">
+            </div>
+        </div><br><br>
+        <div class="form-group row">
+            <div class="col">
+                <label for="exampleFormControlInput1"> Nit del Cliente</label>
+                <input type="text" class="form-control" placeholder="Nit del cliente" formControlName="nit">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1"> Fecha de Creación</label>
+                <input type="datetime" class="form-control" placeholder="Fecha de la Factura" formControlName="fecha">
+            </div>
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary text-center">Editar</button>
+        <button type="button" class="btn btn-danger text-center" (click)="eliminar()">Eliminar</button>
+        <button type="button" class="btn btn-dark text-center" (click)="salir()">Dashboard</button>
+    </form>
+</div>
+
+<app-footer></app-footer>

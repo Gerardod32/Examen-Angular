@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<div class="container">
+    <form [formGroup]="nuevoForm" (ngSubmit)="postForm(nuevoForm.value)">
+        <div class=" form-group row">
+            <div>
+                <label for="exampleFormControlInput1"></label>
+                <input type="text" class="form-control" placeholder="Id de La Factura" formControlName="id" hidden>
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1">Cliente</label>
+                <input type="text" class="form-control" placeholder="Cliente" formControlName="nombre">
+            </div>
+        </div><br><br>
+        <div class="form-group row">
+            <div class="col">
+                <label for="exampleFormControlInput1"> Nit del Cliente</label>
+                <input type="text" class="form-control" placeholder="Nit del cliente" formControlName="nit">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1"> Fecha de Creación</label>
+                <input type="text" class="form-control" value="2018-06-12T19:30" min="2018-06-07T00:00"
+                    max="2025-06-14T00:00" formControlName="fecha">
+            </div>
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary text-center ">Guardar</button>
+    </form>
+</div>
+
+<app-footer></app-footer>
